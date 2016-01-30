@@ -3,7 +3,7 @@ RUBY ON RAILS DICTIONARY - Git and others
 TERMINAL COMMANDS
 Creating and manipulating Rails Apps
 -	Going to a folder: cd #folderpath
--	Creating a Rails’ app in the current folder: rails new #railsappname;
+-	Creating a Rails app in the current folder: rails new #railsappname;
 -	Controllers: A controller is a Ruby class which inherits from ApplicationController and has methods just like any other class. When your application receives a request, the routing will determine which controller and action to run, then Rails creates an instance of that controller and runs the method with the same name as the action;
 -	Creating Rails controllers: rails generate controller #controllersname - rails generate g. In this case, you may already create a html-view (or the action) page using: rails generate #controllersname #htmlpage;
 -	Raking routes to start the app: rake routes;
@@ -21,17 +21,17 @@ RUBY SPECIFICATIONS
 -	Model represents the data the application is working with (and possibly business logic);
 -	View (visual) is the representation of that data;
 -	Controller orchestrates interaction between the model and the view.
--	However, this logic isn’t similar to the MVC C# logic, because in Ruby the routes are very important to the relation between MVC’s functions.
+-	However, this logic isnÕt similar to the MVC C# logic, because in Ruby the routes are very important to the relation between MVCÕs functions.
 -	So, for example, the user sees and sends a action through a View (html page). This message will go to the routes and, after that, will be manipulated by the Controller. Only after those actions, the information will be delivered to the Model.
--	The MVC proprietaries and helpers are located in “app" folder.
+-	The MVC proprietaries and helpers are located in Òapp" folder.
 
 -	Gem files: RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them. In other words, RubyGems are the dependencies and the settings of the ruby application.
--	“Config" folder: Folder responsible for the configuration files (like which database needed and the passwords);
--	“Public” folder: Responsible for the static files. Such as static web pages and so on.
--	“DB" folder: files related to database and “migration” scripts;
+-	ÒConfig" folder: Folder responsible for the configuration files (like which database needed and the passwords);
+-	ÒPublicÓ folder: Responsible for the static files. Such as static web pages and so on.
+-	ÒDB" folder: files related to database and immigration scripts;
 
 RUBY AND HTML
-The extension “erb” in html files stands for a integration between Ruby and HTML. To evaluate a ruby code into the html file, the terms <% %> are needed. To output evaluated Ruby code use <%= %>.
+The extension ÒerbÓ in html files stands for a integration between Ruby and HTML. To evaluate a ruby code into the html file, the terms <% %> are needed. To output evaluated Ruby code use <%= %>.
 
 
 
@@ -40,7 +40,7 @@ Tips:
 -	Constants have it all in caps or the first one in cap.
 
 Questions
--	The “|f|” is an instance writable for new information. f << "Cat and Girl:¬ http:-//catandgi¬rl.com/“;
+-	The “|f|” is an instance writable for new information. f << "Cat and Girl: http:-//catandgi¬rl.com/Ò;
 -	irb - no need of variables, but if you want, you can add a variable
 -	signs in methods = "?" predicate methods and “!” dangerous side-effects. 
 
