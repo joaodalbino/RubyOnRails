@@ -2,46 +2,64 @@ RUBY ON RAILS DICTIONARY - Git and others
 
 TERMINAL COMMANDS
 Creating and manipulating Rails Apps
--	Going to a folder: cd #folderpath
--	Creating a Rails app in the current folder: rails new #railsappname;
--	Controllers: A controller is a Ruby class which inherits from ApplicationController and has methods just like any other class. When your application receives a request, the routing will determine which controller and action to run, then Rails creates an instance of that controller and runs the method with the same name as the action;
--	Creating Rails controllers: rails generate controller #controllersname - rails generate g. In this case, you may already create a html-view (or the action) page using: rails generate #controllersname #htmlpage;
--	Raking routes to start the app: rake routes;
--	Uploading the app into the server: when in the app current folder, type rails server;
+	- Going to a folder: cd #folderpath;
+
+	- Creating a Rails app in the current folder: rails new #railsappname;
+
+	- Controllers: A controller is a Ruby class which inherits from ApplicationController and has methods just like any other class. When your application receives a request, the routing will determine which controller and action to run, then Rails creates an instance of that controller and runs the method with the same name as the action;
+
+	- Creating Rails controllers: rails generate controller #controllersname - rails generate g. In this case, you may already create a html-view (or the action) page using: rails generate #controllersname #htmlpage;
+
+	- Raking routes to start the app: rake routes;
+
+	- Creating a server accessible for other computers: To do that, the IP address is importante. When having this, type rails server -b #THEIPADRESS -p 3000. It will create a localhost web app served by the 3000 port.
+
+	- Uploading the app into the server: when in the app current folder, type rails server;
+
+	- Scaffold command: full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above. In summary, it’s useful tool with already made parameters. To use it, type rails generate scaffold #controllersname #variables. Ex.: rails generate scaffold HighScore game:string score:integer or rails generate scaffold User name:string password:digest.
+
+	- After using the Scaffold command, the rake db:migrate is needed to run some commands and update the database;
+
+	- Creating a index, as administrator and as user, view for users dialog: When creating a user dialog, it’s important to have the Session controller. So, create it: rails g controller Sessions new create destroy. And it’s important to have a administrator view of the system, so create: rails g controller Admin index.
 
 GIT
--	Copying a repository directly to local: git clone #urlpath;
+	- Copying a repository directly to local: git clone #urlpath;
 
 
 RUBY SPECIFICATIONS	 
--	Classes and methods:
--	In ruby, those have almost the same function, different from Java and others languages.
+	- Classes and methods:
+		- In ruby, those have almost the same function, different from Java and others languages.
 
--	MVC logic: When creating a rails app, we need to know how it manipulates and displays the information. MVC initials stands for Model View Controller and witch one these words has a function.
--	Model represents the data the application is working with (and possibly business logic);
--	View (visual) is the representation of that data;
--	Controller orchestrates interaction between the model and the view.
--	However, this logic isn’t similar to the MVC C# logic, because in Ruby the routes are very important to the relation between MVC’s functions.
--	So, for example, the user sees and sends a action through a View (html page). This message will go to the routes and, after that, will be manipulated by the Controller. Only after those actions, the information will be delivered to the Model.
--	The MVC proprietaries and helpers are located in “app" folder.
+	- MVC logic: When creating a rails app, we need to know how it manipulates and displays the information. MVC initials stands for Model View Controller and witch one these words has a function.
+		- Model represents the data the application is working with (and possibly business logic);
+		- View (visual) is the representation of that data;
+		- Controller orchestrates interaction between the model and the view;
+		- However, this logic isn’t similar to the MVC C# logic, because in Ruby the routes are very important to the relation between MVC’s functions.
+		- So, for example, the user sees and sends a action through a View (html page). This message will go to the routes and, after that, will be manipulated by the Controller. Only after those actions, the information will be delivered to the Model.
+		- The MVC proprietaries and helpers are located in “app" folder.
 
--	Gem files: RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them. In other words, RubyGems are the dependencies and the settings of the ruby application.
--	“Config" folder: Folder responsible for the configuration files (like which database needed and the passwords);
--	“Public” folder: Responsible for the static files. Such as static web pages and so on.
--	“DB" folder: files related to database and immigration scripts;
+	- Gem files: RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them. In other words, RubyGems are the dependencies and the settings of the ruby application;
+
+	- “Config" folder: Folder responsible for the configuration files (like which database needed and the passwords);
+
+	- “Public” folder: Responsible for the static files. Such as static web pages and so on;
+
+	- “DB" folder: files related to database and immigration scripts;
+
+GEM
+	- gem 'bcrypt’: To encrypt passwords and other contents;
 
 RUBY AND HTML
 The extension “erb” in html files stands for a integration between Ruby and HTML. To evaluate a ruby code into the html file, the terms <% %> are needed. To output evaluated Ruby code use <%= %>.
 
-
-
 Tips:
--	try to keep business logic out of the view;
--	Constants have it all in caps or the first one in cap.
+	- try to keep business logic out of the view;
+
+	- Constants have it all in caps or the first one in cap.
 
 Questions
--	The ì|f|î is an instance writable for new information. f << "Cat and Girl: http:-//catandgi¨rl.com/“;
--	irb - no need of variables, but if you want, you can add a variable
--	signs in methods = "?" predicate methods and ì!î dangerous side-effects. 
+	- The ì|f|î is an instance writable for new information. f << "Cat and Girl: http:-//catandgi¨rl.com/“;
 
--	
+	- irb - no need of variables, but if you want, you can add a variable;
+
+	- signs in methods = "?" predicate methods and ì!î dangerous side-effects. 
