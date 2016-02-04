@@ -16,11 +16,16 @@ Creating and manipulating Rails Apps
 
 	- Uploading the app into the server: when in the app current folder, type rails server;
 
-	- Scaffold command: full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above. In summary, it’s useful tool with already made parameters. To use it, type rails generate scaffold #controllersname #variables. Ex.: rails generate scaffold HighScore game:string score:integer or rails generate scaffold User name:string password:digest.
+	- Scaffold command: full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above. In summary, it’s useful tool with already made parameters. To use it, type rails generate scaffold #controllersname #variables. Ex.: rails generate scaffold HighScore #entities# game #string# score:integer or rails generate scaffold User name:string password:digest.
 
-	- After using the Scaffold command, the rake db:migrate is needed to run some commands and update the database;
+	- After using the Scaffold command, the rake db:migrate is needed to run some commands and update the database. In summary, it’s important to apply those scaffold command’s changes. It’s a tool to modify the database and responsible for the database schema.
+
+	- Active Record is responsible for the interaction with the database data. CRUD is property of A.R. and stands for Create Retrieve Update Delete.
 
 	- Creating a index, as administrator and as user, view for users dialog: When creating a user dialog, it’s important to have the Session controller. So, create it: rails g controller Sessions new create destroy. And it’s important to have a administrator view of the system, so create: rails g controller Admin index.
+
+	- Rails DB: to contact database’s specifications. When using this command, type “.help” for more information.
+
 
 GIT
 	- Copying a repository directly to local: git clone #urlpath;
@@ -56,6 +61,8 @@ Tips:
 	- try to keep business logic out of the view;
 
 	- Constants have it all in caps or the first one in cap.
+
+	- When having a scaffold app, use #appname#.json to see the things saved in the database.
 
 Questions
 	- The ì|f|î is an instance writable for new information. f << "Cat and Girl: http:-//catandgi¨rl.com/“;
